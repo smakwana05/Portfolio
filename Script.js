@@ -60,7 +60,7 @@ transitions: [
               })
     
               timeline
-              .fromTo("body", {opacity: 0}, {opacity: 1, duration: 1, delay: 0.1});
+              .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3, });
     
             })
           },
@@ -105,7 +105,7 @@ name: 'fade-headersmall',
           })
 
           timeline
-          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 1, delay: 0.1});
+          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3});
 
         })
       },
@@ -152,7 +152,7 @@ name: 'gallery',
             }
           })
           timeline
-          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 1, delay: 0.15});
+          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3, delay: 0.15});
 
         })
       },
@@ -175,7 +175,7 @@ name: 'gallery',
 
             timeline
               .to(next.container, {opacity: 1, duration: 0.3})
-              .to('.item2', {opacity: 1, duration: 0.3, delay: 0.05});
+              .to('.item2', {opacity: 1, duration: 0.3});
           })
         })
       },
