@@ -60,7 +60,7 @@ transitions: [
               })
     
               timeline
-              .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3, delay: 0.4});
+              .fromTo("body", {autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 0.1});
     
             })
           },
@@ -74,7 +74,7 @@ transitions: [
               })
     
               timeline
-                .fromTo(next.container, {opacity: 0}, {opacity: 1, duration: 0.3})
+                .fromTo(next.container, {autoAlpha: 0}, {autoAlpha: 1, duration: 0.3})
            })
           },
     
@@ -88,7 +88,7 @@ transitions: [
               })
     
               timeline
-                .to(current.container, {opacity: 0, duration: 0.3});
+                .to(current.container, {autoAlpha: 0, duration: 0.3});
             })
           }
         },
@@ -105,7 +105,7 @@ name: 'fade-headersmall',
           })
 
           timeline
-          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 1, delay: 0.1});
+          .fromTo("body", {autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 0.1});
 
         })
       },
@@ -119,7 +119,7 @@ name: 'fade-headersmall',
           })
 
           timeline
-          .fromTo(next.container, {opacity: 0}, {opacity: 1, duration: 0.3})
+          .fromTo(next.container, {autoAlpha: 0}, {autoAlpha: 1, duration: 0.3})
         })
       },
 
@@ -134,7 +134,7 @@ name: 'fade-headersmall',
           })
 
           timeline
-            .to(current.container, {opacity: 0, duration: 0.3});
+            .to(current.container, {autoAlpha: 0, duration: 0.3});
         })
       }
     },
@@ -152,7 +152,7 @@ name: 'gallery',
             }
           })
           timeline
-          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 1, delay: 0.15});
+          .fromTo("body", {autoAlpha: 0}, {autoAlpha: 1, duration: 1, delay: 0.15});
 
         })
       },
@@ -163,8 +163,8 @@ name: 'gallery',
         return new Promise(resolve => {
           const images = document.querySelectorAll("img")
 
-          gsap.set(next.container, {opacity: 0});
-          gsap.set('.item2', {opacity: 0});
+          gsap.set(next.container, {autoAlpha: 0});
+          gsap.set('.item2', {autoAlpha: 0});
 
           imagesLoaded(images, () => {
             const timeline = gsap.timeline({
@@ -174,8 +174,8 @@ name: 'gallery',
             })
 
             timeline
-              .to(next.container, {opacity: 1, duration: 0.3})
-              .to('.item2', {opacity: 1, duration: 0.3, delay: 0.05});
+              .to(next.container, {autoAlpha: 1, duration: 0.3})
+              .to('.item2', {autoAlpha: 1, duration: 0.3, delay: 0.05});
           })
         })
       },
@@ -188,7 +188,7 @@ name: 'gallery',
             }
           })
           timeline
-            .to(current.container, {opacity: 0, duration: 0.3});
+            .to(current.container, {autoAlpha: 0, duration: 0.3});
         })
       }
     },
@@ -225,16 +225,16 @@ barba.hooks.enter(() => {
 
 
 
-// function fadeOnce() {
-//   gsap.fromTo("body", 
-//   {opacity: 0}, 
-//   {opacity: 1, duration: 1, delay: 0.5});
-// }
+function fadeOnce() {
+  gsap.fromTo("body", 
+  {autoAlpha: 0}, 
+  {autoAlpha: 1, duration: 1, delay: 0.5});
+}
 
 // function enterAnimation() {
 //   const tl = gsap.timeline();
 //   tl.from('.gridwrapper', {
-//       opacity: 0,
+//       autoAlpha: 0,
 //       duration: 0.35,
 //   });
 // }
@@ -242,7 +242,7 @@ barba.hooks.enter(() => {
 // function leaveAnimation() {
 //   const tl = gsap.timeline();
 //   tl.to('.gridwrapper', {
-//       opacity: 0,
+//       autoAlpha: 0,
 //         duration: 0.35,
 //   });
 // }
