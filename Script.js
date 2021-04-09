@@ -100,12 +100,12 @@ name: 'masonry',
       to: {
         namespace: ['masonry']
       },
-      once(data) {
-        imagesLoaded( body, 
-        function (instance) {
-          fadeOnce();
-        });
-      },
+      // once(data) {
+      //   imagesLoaded( body, 
+      //   function (instance) {
+      //     fadeOnce();
+      //   });
+      // },
 
 
       enter(data) {
