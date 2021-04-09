@@ -228,7 +228,8 @@ a {
 	text-indent: 5px;
 	position: absolute;
 	text-align: center;
-	bottom: 42px;
+	bottom: 50px;
+	// bottom: 42px;
 	width: 100%;
 		a:visited {
 			color: rgb(104, 104, 104);
@@ -241,8 +242,8 @@ a {
 .menu {
 	position: absolute;
 	text-align: center;
-	bottom: 20px;
-	// margin-bottom: 1%;
+	bottom: 23px;
+	// margin-bottom: 20px;
 	width: 100%;
 	word-spacing: 1.1em;
 
@@ -392,7 +393,7 @@ body {
 }
 
 /* Large Desktops */
-@media (min-width: 1097px) and (max-width: 2000px) {
+@media (min-width: 1097px) and (max-width: 1800px) {
 
 .container, .columns {
 		width: 80vw;
@@ -400,17 +401,17 @@ body {
 	}
 }
 
-@media (min-width: 2100px) {
+// @media (min-width: 2100px) {
 
-	.container, .columns {
-			width: 80vw;
-			max-width: 80vh;
-		}
-		.header {
-			height: 34%;
-		}
+// 	.container, .columns {
+// 			width: 80vw;
+// 			max-width: 80vh;
+// 		}
+// 		.header {
+// 			height: 34%;
+// 		}
 	
-	}
+// 	}
 
 	
 // /* SUperlarge */
