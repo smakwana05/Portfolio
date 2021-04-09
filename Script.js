@@ -159,14 +159,14 @@ name: 'gallery',
       enter({next}) {
      
       // resizeAllGridItems(); 
-      header.classList.add("shrink");
         return new Promise(resolve => {
           const images = document.querySelectorAll("img")
-
+          
           gsap.set(next.container, {opacity: 0});
           gsap.set('.item2', {opacity: 0});
 
           imagesLoaded(images, () => {
+            
             const timeline = gsap.timeline({
               onComplete() {
                 resolve();
@@ -178,6 +178,9 @@ name: 'gallery',
               .to('.item2', {opacity: 1, duration: 0.3});
           })
         })
+      },
+      beforeEnter({next}) {
+        header.classList.add("shrink");
       },
       leave({current}) {
         return new Promise(resolve => {
