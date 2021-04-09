@@ -6,8 +6,8 @@ var header = document.querySelector(".header");
 var menu = document.querySelector(".menu");
 var sticky = header.offsetTop;
 const gridwrapper = document.getElementsByClassName(".gridwrapper");
-const images = document.querySelectorAll("[data-src]")
-
+const images = document.querySelectorAll("[data-src]");
+var body = document.querySelector("body");
 // const imgOptions = {
 //   threshold: 0,
 //   rootMargin: "0px 0px 600px 0px"
@@ -152,13 +152,14 @@ name: 'gallery',
             }
           })
           timeline
-          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3, delay: 0.15});
+          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3, delay: 0.25});
 
         })
       },
+
+
       enter({next}) {
-     
-      // resizeAllGridItems(); 
+        header.classList.add("shrink");
         return new Promise(resolve => {
           const images = document.querySelectorAll("img")
           
@@ -179,9 +180,8 @@ name: 'gallery',
           })
         })
       },
-      beforeEnter({next}) {
-        header.classList.add("shrink");
-      },
+
+      
       leave({current}) {
         return new Promise(resolve => {
           const timeline = gsap.timeline({
@@ -234,13 +234,13 @@ function fadeOnce() {
   {opacity: 1, duration: 1, delay: 0.5});
 }
 
-// function enterAnimation() {
-//   const tl = gsap.timeline();
-//   tl.from('.gridwrapper', {
-//       opacity: 0,
-//       duration: 0.35,
-//   });
-// }
+function enterAnimation() {
+  const tl = gsap.timeline();
+  tl.from('.gridwrapper', {
+      opacity: 0,
+      duration: 0.35,
+  });
+}
 
 // function leaveAnimation() {
 //   const tl = gsap.timeline();
