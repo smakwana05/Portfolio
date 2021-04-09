@@ -109,8 +109,7 @@ name: 'masonry',
 
 
       enter(data) {
-        setTimeout(function()
-          {header.classList.add("shrink")}, 100);
+        header.classList.add("shrink");
         
         gsap.set(data.next.container, 
           {opacity: 0});
