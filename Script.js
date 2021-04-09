@@ -175,8 +175,8 @@ name: 'gallery',
             })
 
             timeline
-              .to(next.container, {opacity: 1, duration: 0.3})
-              .to('.item2', {opacity: 1, duration: 0.3});
+              .to(next.container, {opacity: 1, duration: 0.4})
+              .to('.item2', {opacity: 1, duration: 0.4});
           })
         })
       },
