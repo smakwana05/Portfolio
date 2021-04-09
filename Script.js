@@ -152,7 +152,7 @@ name: 'gallery',
             }
           })
           timeline
-          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3, delay: 0.25});
+          .fromTo("body", {opacity: 0}, {opacity: 1, duration: 0.3});
 
         })
       },
