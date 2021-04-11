@@ -101,6 +101,7 @@ name: 'masonry',
         namespace: ['masonry']
       },
       before(data) {
+           setTimeout(function(){header.classList.add("shrink");}, 0);
           gsap.set(document.querySelector(".preloader"), 
           {autoAlpha: 1});
           imagesLoaded( data.next.container, 
@@ -110,7 +111,7 @@ name: 'masonry',
       },
 
       enter(data) {
-        setTimeout(function(){header.classList.add("shrink");}, 150);
+        setTimeout(function(){header.classList.add("shrink");}, 0);
         
         gsap.set(data.next.container, 
           {autoAlpha: 0});
