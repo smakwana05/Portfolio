@@ -6,7 +6,6 @@ var header = document.querySelector(".header");
 var menu = document.querySelector(".menu");
 var sticky = header.offsetTop;
 const gridwrapper = document.getElementsByClassName(".gridwrapper");
-const images = document.querySelectorAll("[data-src]");
 var body = document.querySelector("body");
 
 
@@ -131,7 +130,7 @@ name: 'masonry',
       }
     },
   ],
-  debug: true
+  // debug: true
 
 });
 
