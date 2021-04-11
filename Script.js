@@ -1,5 +1,5 @@
-// barba.use(barbaCss);
-barba.use(barbaPrefetch);
+// // barba.use(barbaCss);
+// barba.use(barbaPrefetch);
 
 var main = document.querySelector(".main");
 var header = document.querySelector(".header");
@@ -19,13 +19,13 @@ function goForward() {
 
 function fadeOnce() {
   gsap.to("body", 
-  {opacity: 1, duration: 0.3});
+  {autoAlpha: 1, duration: 0.1});
 }
 
 function enterAnimation() {
   const tl = gsap.timeline();
   tl.from('.gridwrapper', {
-      opacity: 0,
+      autoAlpha: 0,
       duration: 0.3,
   });
 }
@@ -33,7 +33,7 @@ function enterAnimation() {
 function leaveAnimation() {
   const tl = gsap.timeline();
   tl.to('.gridwrapper', {
-      opacity: 0,
+      autoAlpha: 0,
         duration: 0.3,
   });
 }
@@ -100,23 +100,24 @@ name: 'masonry',
       to: {
         namespace: ['masonry']
       },
-      // once(data) {
-      //   imagesLoaded( body, 
-      //   function (instance) {
-      //     fadeOnce();
-      //   });
-      // },
-
+      before(data) {
+          gsap.set(document.querySelector(".preloader"), 
+          {autoAlpha: 1});
+          imagesLoaded( data.next.container, 
+            function (instance) {
+            gsap.to(document.querySelector(".preloader"), {autoAlpha: 0});
+          });
+      },
 
       enter(data) {
-        header.classList.add("shrink");
+        setTimeout(function(){header.classList.add("shrink");}, 150);
         
         gsap.set(data.next.container, 
-          {opacity: 0});
-        
+          {autoAlpha: 0});
+
         imagesLoaded( data.next.container, 
           function (instance) {
-          gsap.to(data.next.container, {opacity: 1, duration: 0.3});
+          gsap.to(data.next.container, {autoAlpha: 1, duration: 0.3});
           });
       },
 
