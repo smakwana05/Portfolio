@@ -43,7 +43,7 @@ a {
 	position: fixed;
 	top: 45%;
 	justify-content: center;
-	z-index: 1;
+	z-index: 3;
 	visibility: hidden;
 	transition: 0.05s;
 }
@@ -73,6 +73,11 @@ a {
 /* CONTAINER */
 .gridwrapper {
 	height: auto;
+	transition: transform;
+		&.shrink {
+		transform: translateY(-205px);
+		}
+	will-change: opacity;
 }
 
 .container {
@@ -230,15 +235,15 @@ a {
 	width: 100%;
 	height: 31%;
 	z-index: 1;
-	transition: 0.5s;
-	transition-property: height;
+	transition: transform 300ms;
+	will-change: transform;
 		
 		&.rows2 {
 		height: 16%
 		}	
 
 		&.shrink {
-		height: 16%;
+		transform: translateY(-50%);
 
 			&.sticky {
 			position: -webkit-sticky;

@@ -5,7 +5,7 @@ var main = document.querySelector(".main");
 var header = document.querySelector(".header");
 var menu = document.querySelector(".menu");
 var sticky = header.offsetTop;
-const gridwrapper = document.getElementsByClassName(".gridwrapper");
+var gridwrapper = document.querySelector(".gridwrapper");
 var body = document.querySelector("body");
 
 
@@ -28,13 +28,13 @@ function enterAnimation() {
       duration: 0.3,
   });
 }
-
 function leaveAnimation() {
   const tl = gsap.timeline();
   tl.to('.gridwrapper', {
       autoAlpha: 0,
-        duration: 0.3,
-  });
+      duration: 0.3,
+  })
+ 
 }
 
 
@@ -43,9 +43,12 @@ preventRunning: true,
 transitions: [
   {
     name: 'fade-once',
-          once(data) {
-              fadeOnce();
-          },
+        once(data) {
+          imagesLoaded( body, 
+          function (instance) {
+          gsap.to(body, {autoAlpha: 1, duration: 0.3});
+          });
+        },
   },
     
   {  
@@ -53,7 +56,7 @@ transitions: [
     from: { namespace: ["page", "page2rows", "masonry"] },
     to: { namespace: ["home", "alternate"] },
     leave(data) {
-      header.classList.remove("shrink");
+      header.classList.remove("shrink");   
       const done = this.async();
       leaveAnimation();
       setTimeout(function() {
@@ -69,6 +72,7 @@ transitions: [
       to: { namespace: ["page"] },
       leave(data) {
         header.classList.add("shrink");
+        // gridwrapper.classList.add("shrink");
         const done = this.async();
         leaveAnimation();
         setTimeout(function() {
@@ -100,7 +104,7 @@ name: 'masonry',
         namespace: ['masonry']
       },
       before(data) {
-           setTimeout(function(){header.classList.add("shrink");}, 0);
+          setTimeout(function(){header.classList.add("shrink");}, 0);
           gsap.set(document.querySelector(".preloader"), 
           {autoAlpha: 1});
           imagesLoaded( data.next.container, 
