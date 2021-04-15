@@ -157,8 +157,8 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  -webkit-transition: opacity 200ms;
-  transition: opacity 200ms;
+  -webkit-transition: opacity 800ms;
+  transition: opacity 800ms;
   opacity: 1;
 }
 
