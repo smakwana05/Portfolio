@@ -1,71 +1,154 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <title>Suraj Makwana</title>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Suraj Makwana Portfolio">
 <link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.typekit.net/tke2dxb.css">
+<!-- <script src="/Portfolio/glightbox.js"></script> -->
+<noscript><link rel="stylesheet" href="css/NOSCRIPT.css" />
+<div class="noscript">Javascript is required for full functionality of the site. Please enable Javascript otherwise some links or buttons may not function as intended.</div>
+</noscript>
+<!-- <link rel="stylesheet" href="css/glightbox.css" /> -->
 <script src="https://cdn.jsdelivr.net/npm/@barba/core@2.9.7/dist/barba.umd.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/@barba/prefetch@2.1.10/dist/barba-prefetch.umd.min.js"></script> -->
 <script src="https://kit.fontawesome.com/297e22bac0.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/gsap@latest/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" defer></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script src="Script.js" defer></script>
-<script src="Intersection.js" defer></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<link rel="stylesheet" href="css/fancybox.css"/>
+
+
+
 </head>
 
-<body data-barba="wrapper">
-	
+<body>
 	<div class="preloader">
 		<div class="circlespin"></div>
 	</div>
+
+	<div class="allcontent" data-barba="wrapper">
+
+		<!-- <label class="toggle" tabindex="0">
+			<input type="checkbox" id="darkModeToggle">
+			<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.05 20.05">
+				<circle class="circle" cx="10.03" cy="10.03" r="10.03"/>
+				<path class="path" d="m10.03,2c4.43,0,8.03,3.59,8.03,8.03s-3.59,8.03-8.03,8.03V2Z"/>
+			</svg>
+		</label> -->
+		
+			<!-- <i class="fas fa-circle"></i> -->
+		<div class="header">
+			<div class="header-title">
+				<a href="/Portfolio/index.html">SURAJ MAKWANA</a>
+			</div>
+				<div class="navbarmobile">
+					<input type="checkbox" id="toggleMobile" style="display: none;">
+					<label for="toggleMobile" class="descriptioniconCSS mobile hidden" tabindex="0" role="button"><span class="line"></span></label>
+					<button class="hamburgerbutton" aria-controls="primary-navigation" aria-expanded="false">
+						<svg viewBox="0 0 100 100" width="30">
+							<rect class="menuline top" width="97" height="6" x="0" y="3" rx="3"></rect>
+							<rect class="menuline middle" width="97" height="6" x="0" y="47" rx="3"></rect>
+							<rect class="menuline bottom" width="97" height="6" x="0" y="92" rx="3"></rect>
+						</svg>
+					</button>
+				
+					<button class="gohome">
+						<a href="/Portfolio/index.html">
+						<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="31" viewBox="0 0 27 29"><path class="homeiconpath"d="m13,1.5c.37,0,.73.14.99.39l9.53,8.99c.62.59.98,1.4.98,2.24v9.82c0,1.74-1.49,3.15-3.31,3.15H4.81c-1.83,0-3.31-1.41-3.31-3.15v-9.82c0-.83.36-1.65.98-2.24L12.01,1.89c.26-.25.61-.39.99-.39m0-1.5c-.73,0-1.46.26-2.02.79L1.45,9.78c-.93.88-1.45,2.08-1.45,3.33v9.82c0,2.57,2.16,4.65,4.81,4.65h16.37c2.66,0,4.81-2.08,4.81-4.65v-9.82c0-1.25-.52-2.45-1.45-3.33L15.02.79c-.56-.53-1.29-.79-2.02-.79h0Z"/></svg>
+						</a>
+					</button>
+				</div>
+			<div class="menu">
+					
+				<nav class="menucard">	
+					<a href="/Portfolio/BasicPage_Alternate.html" data-page="art" >Art</a>
+					<!-- <button class="expandandclose"></button> -->
+						<a class="submenu" href="/Portfolio/life-drawing-column.html" data-page="lifedrawing">Life Drawing</a>
+						<a class="submenu" href="/Portfolio/BasicPage_MasonryNew.html" data-page="school">School</a>
+						<a class="submenu" href="/Portfolio/BasicPage_Alternate.html" data-page="crafts">Crafts</a>
+					<a href="/Portfolio/BasicPage_3plusrows.html" data-page="architecture" >Architecture</a>
+					<a href="/Portfolio/BasicPage_2rows.html" data-page="travel" >Travel</a>
+					<a href="/Portfolio/BasicPage_Content.html" data-page="process" >Process</a>
+					<a href="/Portfolio/BasicPage_Alternate.html" data-page="about" >About</a>
+
+					<div class="footer-mobile">
+						<i class="fab fa-linkedin"></i>
+						<!-- <i class="fab fa-facebook-square"></i> -->			
+				<i class="fa-solid fa-square-envelope"></i>
+						
+		
+						<label class="toggleCSSonly" tabindex="0">
+							<input type="checkbox" id="darkModeToggleMobile">
+							<span class="slider"></span>
+							</label>
+					</div>
+				</nav>
+				
+			</div>
+			<div tabindex="-1" class="descriptionbox mobile">
+				<button tabindex="-1" class="descriptiontext mobile" tabindex="0" role="button"></button>
+			</div>	
+		</div>	
+
+		<div data-barba="container" class="gridwrapper"  data-barba-namespace="home">
+			<div class="container">
+				
+				<div class="item1" tabindex="-1">
+					<a class="buttontext" tabindex="-1" title="Art" aria-label="Art" href="/Portfolio/BasicPage_Alternate.html">ART</a>
+					<a href="/Portfolio/BasicPage_Alternate.html" aria-label="Art" tabindex="0"  class="overlay art"></a>
+					<img src="images/Button images/Menu_Art.jpg" tabindex="-1" alt="Art">
+				</div>
+
+				<div class="item1" tabindex="-1">
+					<a class="buttontext" tabindex="-1" title="architecture" aria-label="architecture" href="/Portfolio/BasicPage_3plusrows.html">Architecture</a>
+					<a href="/Portfolio/BasicPage_3plusrows.html" aria-label="architecture" tabindex="0" class="overlay architecture"></a>
+					<img src="images\Button images\Menu_Architecture.jpg" tabindex="-1" alt="Architecture">
+				</div>
+
+				<div class="item1" tabindex="-1">
+					<a class="buttontext" tabindex="-1" title="travel" aria-label="travel" href="/Portfolio/BasicPage_2rows.html">Travel</a>
+					<a href="/Portfolio/BasicPage_2rows.html" aria-label="travel" tabindex="0" class="overlay travel"></a>
+					<img class="aligntop" tabindex="-1" src="images\Button images\travel.jpg" alt="Travel">
+				</div>
+			</div>
+
+			<div class="footer">
+
+				<i class="fab fa-linkedin"></i>
+			
+				<!-- <i class="fab fa-facebook-square"></i> -->
+			
+				<i class="fa-solid fa-square-envelope"></i>
+
+		
+				<!-- <label class="toggle2" tabindex="0">
+					<input type="checkbox" id="darkModeToggleFooter">
+					<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 18">
+					  <path class="circle" d="m29,1.6c.77,0,1.4.63,1.4,1.4v12c0,.77-.63,1.4-1.4,1.4H3c-.77,0-1.4-.63-1.4-1.4V3c0-.77.63-1.4,1.4-1.4h26m0-1.6H3C1.35,0,0,1.35,0,3v12c0,1.65,1.35,3,3,3h26c1.65,0,3-1.35,3-3V3c0-1.65-1.35-3-3-3h0Z"/>
+					  <rect id="toggleRect" class="path" x="16.74" y="2.91" width="12.17" height="12.17" rx=".82" ry=".82"/>
+					</svg>
+				  </label> -->
+
+				  <label for="darkModeToggleFooter" class="toggleCSSonly" tabindex="0">
+					<input type="checkbox" id="darkModeToggleFooter" aria-label="darkModeToggle">
+					<span class="slider"></span>
+				  </label>
+
+				  
+
+				<!-- <i class="fab fa-pinterest-square"></i> -->
+				<!-- <div class="mini">website by suraj makwana</div> -->
 	
-	<div class="header">
-		<div class="header-title"><a href="/Portfolio/index.html" > SURAJ MAKWANA</a></div>
-		<div class="menu">
-			<a href="/Portfolio/BasicPage_Alternate.html" >Art</a>
-			<a href="/Portfolio/BasicPage_3plusrows.html" >Architecture</a>
-			<a href="/Portfolio/BasicPage_2rows.html" >Travel</a>
-			<a href="/Portfolio/BasicPage_Content.html" >Process</a>
-			<a href="/Portfolio/BasicPage_Alternate.html" >About</a>
-		</div>
-	</div>	
-
-<div data-barba="container" class="gridwrapper"  data-barba-namespace="home">
-	<div class="container">
-
-		<div class="item1">
-			<a class="buttontext" title="Art" href="/Portfolio/BasicPage_Alternate.html">ART</a>
-			<img src="images/Button images/Menu_Art.jpg" alt="Art">
-			<a href="/Portfolio/BasicPage_Alternate.html" class="overlay art"></a>
-		</div>
-
-		<div class="item1">
-			<a class="buttontext" href="/Portfolio/BasicPage_3plusrows.html">Architecture</a>
-			<img src="images\Button images\Menu_Architecture.jpg" alt="Architecture">
-			<a href="/Portfolio/BasicPage_3plusrows.html" class="overlay architecture"></a>
-		</div>
-
-		<div class="item1">
-			<a class="buttontext" href="/Portfolio/BasicPage_2rows.html">Travel</a>
-			<img src="images\Button images\travel.jpg" alt="Travel">
-			<a href="/Portfolio/BasicPage_2rows.html" class="overlay travel"></a>
+			</div>	
 		</div>
 	</div>
-
-
-	<div class="footer">
-			<i class="fab fa-linkedin"></i>
-
-		<i class="fab fa-facebook-square"></i>
-		
-		<i class="fab fa-pinterest-square"></i>
-		<!-- <div class="mini">website by suraj makwana</div> -->
-	</div>	
-</div>
-
-
 </body>
 
 </html>

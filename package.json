@@ -1,3 +1,9 @@
 {
-    "type": "module"
+    "type": "module",
+    "devDependencies": {
+        "@barba/prefetch": "^2.1.10"
+    },
+    "dependencies": {
+        "@fancyapps/ui": "^5.0.29"
+    }
 }
